@@ -24,8 +24,7 @@ body {
     top: 0px;
     bottom: 0px;
     margin: auto;
-    margin-bottom: 90px;
-    z-index: 2;
+    z-index: 4;
 }
 
 .prompt {
@@ -33,7 +32,7 @@ body {
     top: 0px;
     bottom: 0px;
     margin: auto;
-    padding-left: 12%;
+    padding-left: 11%;
     z-index: 2;
 }
 
