@@ -1,0 +1,58 @@
+body {
+    background-image: url(../images/body.png);
+}
+.fighter {
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding-left: 40px;
+    margin-top: 270px;
+    z-index: 1;
+}
+
+.opponent {
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding-left: 700px;
+    margin-top: 270px;
+    z-index: 1;
+}
+
+.greeting {
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    margin-bottom: 90px;
+    z-index: 2;
+}
+
+.prompt {
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding-left: 12%;
+    z-index: 2;
+}
+
+.notify {
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    margin-left: 30%;
+    z-index: 2;
+    height: 10%;
+}
+
+.restart {
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    margin-left: 18%;
+    z-index: 2;
+    height: 10%;
+}
