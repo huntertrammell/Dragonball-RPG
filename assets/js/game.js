@@ -11,34 +11,50 @@ var playerap = "";
 var enemyhp = "";
 var enemyap = "";
 
-//create object variables to contain each characters HP/AP
+//create object variables to contain each characters default HP/AP
 var goku = {
+    name: 'Goku',
     health: 500,
     attack: 25,
+    counter: 25,
+    src: 'assets/images/goku/gokuavatar.png'
 };
 var vegeta = {
+    name: 'Vegeta',
     health: 475,
     attack: 30,
+    counter: 30,
 };
 var monaka = {
+    name: 'Monaka',
     health: 100,
     attack: 10,
+    counter: 10,
 };
 var piccolo = {
+    name: 'Piccolo',
     health: 425,
     attack: 15,
+    counter: 15,
 };
 var trunks = {
+    name: 'Trunks',
     health: 450,
     attack: 20,
+    counter: 20,
 };
 
 //main function that houses game mechanics - lots of swapping elements/divs and importing data from arrays
 $(document).ready(function() {
+    $('#text').hide();
     $(document).on('click', function() {
-        $('#notification').children('#start').attr('src', '');
+        $('#start').hide();
     });
     //need to get onclick event for player selection
+    $('#char').on('click', function(){
+        $('#char').hide();
+        $('#playerName')(chararray.name);
+    })
     //after player selected choose fighter switches to choose enemy
     //after player selected need to populate that image into the player column
     //need to push player into player player var

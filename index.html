@@ -22,8 +22,8 @@
                 and be replaced with a text field DIV that tells the player how much damaged dealt/taken. 
                 Text box will be replaced using the last "filler" div in this section-->
                 <div class="col"></div>
-                <div class="col">
-                    <h5 class="text-center">Goku</h5>
+                <div id="char" class="col">
+                    <h5 class="text-center" value="goku">Goku</h5>
                     <img src="assets/images/goku/gokuavatar.png" alt="goku" class="img-fluid img-thumbnail bg-dark img-responsive">
                     <p class="text-center font-italic">500 HP</p>
                 </div>
@@ -48,28 +48,28 @@
                     <p class="text-center font-italic">475 HP</p>
                 </div>
                 <div class="col"></div>
-                <!--This is what the inserted text field will look like-->
-                <!--<div class="col bg-dark img-thumbnail">
+                <!--text field, hidden at page load but once col's above removed will be-->
+                <div id='text' class="col bg-dark img-thumbnail">
                     <hr class="bg-white">
                     <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto facere perferendis quos, quia hic nobis rerum deleniti eligendi non itaque pariatur, dolore et similique? Pariatur quod accusantium possimus debitis!</p>
                     <hr class="bg-white">
                 </div>
-                <br>-->
+                <br id="text">
             </div>
             <div class="row">
-                <div class="col-1 bg-dark rounded img-thumbnail">
+                <div id="playerplaceholder" class="col-1 bg-dark rounded img-thumbnail">
                     <br><br><br><br><br>
                     <hr class="bg-white">
                     <!--Populates player selected player-->
-                    <h5 class="text-center">???????</h5>
-                    <img src="assets/images/placeholder.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                    <h5 id="playerName" class="text-center">???????</h5>
+                    <img id="playerImg" src="assets/images/placeholder.png" class="img-fluid img-thumbnail bg-dark img-responsive">
                     <br><br>
                     <div>
                         <!--Tracks HP and AP as they go up/down and changes based on player selected-->
                         <h5 class="text-center">Health</h5>
-                        <p class="text-center font-italic">???</p>
+                        <p id="playerHP" class="text-center font-italic">???</p>
                         <h5 class="text-center">Attack</h5>
-                        <p class="text-center font-italic">???</p>
+                        <p id="playerAP" class="text-center font-italic">???</p>
                     </div>
                     <hr class="bg-white">
                 </div>
