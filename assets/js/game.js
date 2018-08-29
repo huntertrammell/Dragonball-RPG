@@ -53,27 +53,43 @@ $(document).ready(function() {
 
     //need to get onclick event for player selection
 //need to get onclick event for player selection
-    $('#charselect').on('click', function(){
-        if ($('#goku').click) {
-            $('#goku').appendTo('#playerplaceholder');
-        } 
-        else if ($('#vegeta').click) {
-            $('#vegeta').hide();
-        } 
-        else if ($('#monaka').click) {
-            $('#monaka').hide();
-        } 
-        else if ($('#piccolo').click) {
-            $('#piccolo').hide();
-        } 
-        else if ($('#trunks').click) {
-            $('#trunks').hide();
-        }
-        else {
-            alert("Click on a fighter to begin");
-        }
+    $('#goku').on('click', function(){
+        $('#playerImg').attr('src', "assets/images/goku/gokuavatar.png");
+        $('#arenaFighter').attr('src', "assets/images/goku/left/goku.png");
+        $('#playerName').text(goku.name);
+        $('#playerHP').text(goku.health);
+        $('#playerAP').text(goku.attack);
     });
-            //https://stackoverflow.com/questions/6629297/how-to-do-if-clicked-else/6629427 - if clicked then statement
+    $('#vegeta').on('click', function(){
+        $('#playerImg').attr('src', "assets/images/vegeta/vegetaavatar.png");
+        $('#arenaFighter').attr('src', "assets/images/vegeta/left/vegeta.png");
+        $('#playerName').text(vegeta.name);
+        $('#playerHP').text(vegeta.health);
+        $('#playerAP').text(vegeta.attack);
+    })
+    $('#monaka').on('click', function(){
+        $('#playerImg').attr('src', "assets/images/monaka/monakaavatar.png");
+        $('#arenaFighter').attr('src', "assets/images/monaka/left/monaka.png");
+        $('#playerName').text(monaka.name);
+        $('#playerHP').text(monaka.health);
+        $('#playerAP').text(monaka.attack);
+    });
+    $('#piccolo').on('click', function(){
+        $('#playerImg').attr('src', "assets/images/piccolo/piccoloavatar.png");
+        $('#arenaFighter').attr('src', "assets/images/piccolo/left/piccolo.png");
+        $('#playerName').text(piccolo.name);
+        $('#playerHP').text(piccolo.health);
+        $('#playerAP').text(piccolo.attack);
+    });
+    $('#trunks').on('click', function(){
+        $('#playerImg').attr('src', "assets/images/trunks/trunksavatar.png");
+        $('#arenaFighter').attr('src', "assets/images/trunks/left/trunks.png");
+        $('#playerName').text(trunks.name);
+        $('#playerHP').text(trunks.health);
+        $('#playerAP').text(trunks.attack);
+    });
+
+    //https://stackoverflow.com/questions/6629297/how-to-do-if-clicked-else/6629427 - if clicked then statement
     //after player selected choose fighter switches to choose enemy
     //after player selected need to populate that image into the player column
     //need to push player into player player var
@@ -82,4 +98,4 @@ $(document).ready(function() {
     //after all is set need to generate text box in place of character position for later use
     //replace choose enemy with fight image and add on click event to start battle
     
-    });
+});
