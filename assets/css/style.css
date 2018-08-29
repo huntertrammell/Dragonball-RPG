@@ -32,7 +32,7 @@ body {
     top: 0px;
     bottom: 0px;
     margin: auto;
-    padding-left: 11%;
+    padding-left: 30%;
     z-index: 2;
 }
 
@@ -54,4 +54,12 @@ body {
     margin-left: 18%;
     z-index: 2;
     height: 10%;
+}
+#text {
+    z-index: 5;
+    position: absolute;
+    width: 96%;
+    margin: 0;
+    top: 0px;
+    right: 19px;
 }

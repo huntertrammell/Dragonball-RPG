@@ -17,44 +17,62 @@
     <br>
     <div class="container bg-transparent rounded text-light">
         <div class="p-4">
-            <div id="charselect" class="row">
+            <div id="charSelect" class="row">
                 <!--This is where characters will sit while awaiting selection - once enemy is selected this area will be removed by
                 and be replaced with a text field DIV that tells the player how much damaged dealt/taken. 
                 Text box will be replaced using the last "filler" div in this section-->
-                <div class="col"></div>
-                <div id="goku" class="col">
-                    <h5 class="text-center">Goku</h5>
-                    <img src="assets/images/goku/gokuavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
-                    <p class="text-center font-italic">500 HP</p>
-                </div>
-                <div id="vegeta" class="col">
-                    <h5 class="text-center">Vegeta</h5>
-                    <img src="assets/images/vegeta/vegetaavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
-                    <p class="text-center font-italic">450 HP</p>
-                </div>
-                <div id="monaka" class="col">
-                    <h5 class="text-center">Monaka</h5>
-                    <img src="assets/images/monaka/Monakaavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
-                    <p class="text-center font-italic">??? HP</p>
-                </div>
-                <div id="piccolo" class="col">
-                    <h5 class="text-center">Piccolo</h5>
-                    <img src="assets/images/piccolo/piccoloavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
-                    <p class="text-center font-italic">425 HP</p>
-                </div>
-                <div id="trunks" class="col">
-                    <h5 class="text-center">Trunks</h5>
-                    <img src="assets/images/trunks/trunksavatar.png" class="img-fluid img-thumbnail bg-dark">
-                    <p class="text-center font-italic">475 HP</p>
-                </div>
-                <div class="col"></div>
-                <!--text field, hidden at page load but once col's above removed will be-->
-                <div id='text' class="col bg-dark img-thumbnail">
-                    <hr class="bg-white">
-                    <p class="text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto facere perferendis quos, quia hic nobis rerum deleniti eligendi non itaque pariatur, dolore et similique? Pariatur quod accusantium possimus debitis!</p>
-                    <hr class="bg-white">
-                </div>
-                <br id="text">
+                <div id="anchor1" class="col"></div>
+                    <div id="goku" class="col">
+                        <h5 class="text-center">Goku</h5>
+                        <img src="assets/images/goku/gokuavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                        <p class="text-center font-italic">500 HP</p>
+                    </div>
+                    <div id="vegeta" class="col">
+                        <h5 class="text-center">Vegeta</h5>
+                        <img src="assets/images/vegeta/vegetaavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                        <p class="text-center font-italic">450 HP</p>
+                    </div>
+                    <div id="monaka" class="col">
+                        <h5 class="text-center">Monaka</h5>
+                        <img src="assets/images/monaka/Monakaavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                        <p class="text-center font-italic">??? HP</p>
+                    </div>
+                    <div id="piccolo" class="col">
+                        <h5 class="text-center">Piccolo</h5>
+                        <img src="assets/images/piccolo/piccoloavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                        <p class="text-center font-italic">425 HP</p>
+                    </div>
+                    <div id="trunks" class="col">
+                        <h5 class="text-center">Trunks</h5>
+                        <img src="assets/images/trunks/trunksavatar.png" class="img-fluid img-thumbnail bg-dark">
+                        <p class="text-center font-italic">475 HP</p>
+                    </div>
+                    <div id="" class="col goku">
+                        <h5 class="text-center">Goku</h5>
+                        <img src="assets/images/goku/gokuavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                        <p class="text-center font-italic">500 HP</p>
+                    </div>
+                    <div id="" class="col vegeta">
+                        <h5 class="text-center">Vegeta</h5>
+                        <img src="assets/images/vegeta/vegetaavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                        <p class="text-center font-italic">450 HP</p>
+                    </div>
+                    <div id="" class="col monaka">
+                        <h5 class="text-center">Monaka</h5>
+                        <img src="assets/images/monaka/Monakaavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                        <p class="text-center font-italic">??? HP</p>
+                    </div>
+                    <div id="" class="col piccolo">
+                        <h5 class="text-center">Piccolo</h5>
+                        <img src="assets/images/piccolo/piccoloavatar.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                        <p class="text-center font-italic">425 HP</p>
+                    </div>
+                    <div id="" class="col trunks">
+                        <h5 class="text-center">Trunks</h5>
+                        <img src="assets/images/trunks/trunksavatar.png" class="img-fluid img-thumbnail bg-dark">
+                        <p class="text-center font-italic">475 HP</p>
+                    </div>
+                <div id="anchor2" class="col"></div>
             </div>
             <div class="row">
                 <div id="playerplaceholder" class="col-1 bg-dark rounded img-thumbnail">
@@ -75,34 +93,42 @@
                 </div>
                 <div id="notification" class="col">
                     <img  src="assets/images/arena.png" alt="arena" class="img-fluid img-thumbnail bg-dark w-100 position-relative img-responsive">
+                                    <!--text field, hidden at page load but once col's above removed will be-->
+                    <div id='text' class="bg-dark img-thumbnail">
+                        <hr class="bg-white">
+                        <p id="playerStat" class="text-white text-center"></p>
+                        <p id="enemyStat" class="text-white text-center"></p>
+                        <hr class="bg-white">
+                    </div>
+                    <br id="text">
                     <!--Player selected fighter will populate into this div putting fighter in the arena-->
                     <img id="arenaFighter" src="" class="img-fluid fighter h-50 pb-1 position-absolute img-responsive">
                     <!--Player selected opponent will populate into this div putting opponent in the arena-->
-                    <img src="" class="img-fluid opponent h-50 pb-1 position-absolute img-responsive">
+                    <img id="arenaOpponent" src="" class="img-fluid opponent h-50 pb-1 position-absolute img-responsive">
                     <!--Gamestart/pageload image is populated into this div that has rules/directions and click anywhere to begin-->
                     <img id="start" src="assets/images/gamerules.png" class="img-fluid greeting position-absolute img-responsive">
                     <!--After game start this populates with choose your fighter or opponent-->
-                    <img src="assets/images/notify/choosefighter.png" class="img-fluid prompt h-50 pb-1 position-absolute img-responsive">
+                    <img id="prompt" src="assets/images/notify/choosefighter.png" class="img-fluid prompt h-25 pb-1 position-absolute img-responsive">
                     <!--Will display "FIGHT!, DEFEAT!, or VICTORY!" depending on game stage-->
-                    <img src="" class="img-fluid notify pb-1 position-absolute img-responsive">
+                    <img id="begin" src="" class="img-fluid notify pb-1 position-absolute img-responsive">
                     <!--Will display a "PLAY AGAIN?" prompt, when clicked game will reload to fighter selection-->
                     <img src="" class="img-fluid restart pb-1 position-absolute img-responsive">
                 </div>
-                <div class="col-1 bg-dark rounded img-thumbnail">
-                    <br>
-                    <!--This is where enemy's populate after user selection is made-->
-                    <h5 id="enemy1" class="text-center">???????</h5>
-                    <img id="enemy1pic" src="assets/images/placeholder.png" class="img-fluid img-thumbnail bg-dark img-responsive">
-                    <p id="enemy1hp" class="text-center font-italic">???</p>
-                    <h5 id="enemy2" class="text-center">???????</h5>
-                    <img id="enemy2pic" src="assets/images/placeholder.png" class="img-fluid img-thumbnail bg-dark img-responsive">
-                    <p id="enemy2hp" class="text-center font-italic">???</p>
-                    <h5 id="enemy3" class="text-center">???????</h5>
-                    <img id="enemy3pic" src="assets/images/placeholder.png" class="img-fluid img-thumbnail bg-dark img-responsive">
-                    <p id="enemy3hp" class="text-center font-italic">???</p>
-                    <h5 id="enemy4" class="text-center">???????</h5>
-                    <img id="enemy4pic" src="assets/images/placeholder.png" class="img-fluid img-thumbnail bg-dark img-responsive">
-                    <p id="enemy4hp" class="text-center font-italic">???</p>                    
+                <div id="enemyplaceholder" class="col-1 bg-dark rounded img-thumbnail">
+                    <br><br><br><br><br>
+                    <hr class="bg-white">
+                    <!--Populates player selected enemy-->
+                    <h5 id="enemyName" class="text-center">???????</h5>
+                    <img id="enemyImg" src="assets/images/placeholder.png" class="img-fluid img-thumbnail bg-dark img-responsive">
+                    <br><br>
+                    <div>
+                        <!--Tracks HP and AP as they go up/down and changes based on enemy selected-->
+                        <h5 class="text-center">Health</h5>
+                        <p id="enemyHP" class="text-center font-italic">???</p>
+                        <h5 class="text-center">Attack</h5>
+                        <p id="enemyAP" class="text-center font-italic">???</p>
+                    </div>
+                    <hr class="bg-white">                 
                 </div>
             </div>
         </div>
