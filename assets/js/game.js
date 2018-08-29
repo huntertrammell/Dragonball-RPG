@@ -49,12 +49,31 @@ $(document).ready(function() {
     $('#text').hide();
     $(document).on('click', function() {
         $('#start').hide();
-    });
-    //need to get onclick event for player selection
-    $('#char').on('click', function(){
-        $('#char').hide();
-        $('#playerName')(chararray.name);
     })
+
+    //need to get onclick event for player selection
+//need to get onclick event for player selection
+    $('#charselect').on('click', function(){
+        if ($('#goku').click) {
+            $('#goku').appendTo('#playerplaceholder');
+        } 
+        else if ($('#vegeta').click) {
+            $('#vegeta').hide();
+        } 
+        else if ($('#monaka').click) {
+            $('#monaka').hide();
+        } 
+        else if ($('#piccolo').click) {
+            $('#piccolo').hide();
+        } 
+        else if ($('#trunks').click) {
+            $('#trunks').hide();
+        }
+        else {
+            alert("Click on a fighter to begin");
+        }
+    });
+            //https://stackoverflow.com/questions/6629297/how-to-do-if-clicked-else/6629427 - if clicked then statement
     //after player selected choose fighter switches to choose enemy
     //after player selected need to populate that image into the player column
     //need to push player into player player var
@@ -63,4 +82,4 @@ $(document).ready(function() {
     //after all is set need to generate text box in place of character position for later use
     //replace choose enemy with fight image and add on click event to start battle
     
-});
+    });
