@@ -37,7 +37,7 @@ body {
 }
 
 .notify {
-    left: 0px;
+    left: 15px;
     top: 0px;
     bottom: 0px;
     margin: auto;
@@ -55,12 +55,30 @@ body {
     z-index: 2;
     height: 10%;
 }
+
+.result {
+    left: 0px;
+    top: 0px;
+    bottom: 207px;
+    margin: auto;
+    margin-left: 30%;
+    z-index: 2;
+    height: 10%;
+}
+
 #text {
     z-index: 5;
     position: absolute;
-    width: 96%;
+    width: 93%;
     margin: 0;
-    top: 0px;
-    right: 19px;
-    line-height: .5; 
+    top: 10px;
+    right: 35px;
+    line-height: 1;
+    margin-top: 10px;
 }
+
+p.text {
+    margin-top: 10px;
+}
+
+

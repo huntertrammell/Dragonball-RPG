@@ -117,6 +117,7 @@ $(function battle() {
             $('.goku').replaceWith('<div id=emptyDiv class="col">');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
+            $('#result').attr('src', '');
 
         });
         $('.vegeta').on('click', function(){
@@ -129,6 +130,7 @@ $(function battle() {
             $('.vegeta').replaceWith('<div id=emptyDiv class="col">');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
+            $('#result').attr('src', '');
         })
         $('.monaka').on('click', function(){
             enemy = monaka
@@ -140,6 +142,7 @@ $(function battle() {
             $('.monaka').replaceWith('<div id=emptyDiv class="col">');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
+            $('#result').attr('src', '');
         });
         $('.piccolo').on('click', function(){
             enemy = piccolo;
@@ -148,9 +151,10 @@ $(function battle() {
             $('#enemyName').text(piccolo.name);
             $('#enemyHP').text(piccolo.health);
             $('#enemyAP').text(piccolo.counter);
-            $('.piccolo').replaceWith('<div id=emptyDiv class="col">');
+            $('.piccolo').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Piccolo</h5>' + '<img src="assets/images/piccolo/piccoloavatar.png" class="img-fluid img-thumbnail bg-dark">' + '<p class="text-center font-italic">375 HP</p>' + '</div>');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
+            $('#result').attr('src', '');
         });
         $('.trunks').on('click', function(){
             enemy = trunks;
@@ -159,9 +163,10 @@ $(function battle() {
             $('#enemyName').text(trunks.name);
             $('#enemyHP').text(trunks.health);
             $('#enemyAP').text(trunks.counter);
-            $('.trunks').replaceWith('<div id=emptyDiv class="col">');
+            $('.trunks').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Trunks</h5>' + '<img src="assets/images/trunks/trunksavatar.png" class="img-fluid img-thumbnail bg-dark">' + '<p class="text-center font-italic">350 HP</p>' + '</div>');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
+            $('#result').attr('src', '');
         });
 
 $(function battleSim() {
@@ -184,10 +189,12 @@ $(function battleSim() {
             $('#enemyStat').text(player.name + ' has been defeated! Would you like to try again?');
             $('#attackBonus').text('');
             $('#begin').attr('src', '');
+            $('#result').attr('src', 'assets/images/notify/defeat.png');
             $('#reset').attr('src', 'assets/images/notify/restart.png');
 
         } else if ((parseInt(enemy.health)) <= 0) {
-            $('#begin').attr('src', 'assets/images/notify/victory.png');
+            $('#result').attr('src', 'assets/images/notify/victory.png');
+            $('#begin').attr('src', '');
             $('#playerStat').text('');
             $('#enemyStat').text(enemy.name + ' has been defeated! Choose another fighter!');
             $('#attackBonus').text('');

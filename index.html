@@ -95,13 +95,10 @@
                     <img  src="assets/images/arena.png" alt="arena" class="img-fluid img-thumbnail bg-dark w-100 position-relative img-responsive">
                                     <!--text field, hidden at page load but once col's above removed will be-->
                     <div id='text' class="bg-dark img-thumbnail">
-                        <hr class="bg-white">
-                        <p id="playerStat" class="text-white text-center"></p>
-                        <p id="enemyStat" class="text-white text-center"></p>
-                        <p id="attackBonus" class="text-white text-center"></p>
-                        <hr class="bg-white">
+                        <p id="playerStat" class="text-white text-center text"></p>
+                        <p id="enemyStat" class="text-white text-center text"></p>
+                        <p id="attackBonus" class="text-white text-center text"></p>
                     </div>
-                    <br id="text">
                     <!--Player selected fighter will populate into this div putting fighter in the arena-->
                     <img id="arenaFighter" src="" class="img-fluid fighter h-50 pb-1 position-absolute img-responsive">
                     <!--Player selected opponent will populate into this div putting opponent in the arena-->
@@ -110,8 +107,10 @@
                     <img id="start" src="assets/images/gamerules.png" class="img-fluid greeting position-absolute img-responsive">
                     <!--After game start this populates with choose your fighter or opponent-->
                     <img id="prompt" src="assets/images/notify/choosefighter.png" class="img-fluid prompt h-25 pb-1 position-absolute img-responsive">
-                    <!--Will display "FIGHT!, DEFEAT!, or VICTORY!" depending on game stage-->
+                    <!--Will display "FIGHT!" depending on game stage-->
                     <img id="begin" src="" class="img-fluid notify pb-1 position-absolute img-responsive">
+                    <!--WIll dislplay Victory or Defeat-->
+                    <img id="result" src="" class="img-fluid result pb-1 position-absolute img-responsive">
                     <!--Will display a "PLAY AGAIN?" prompt, when clicked game will reload to fighter selection-->
                     <img id="reset" src="" class="img-fluid restart pb-1 position-absolute img-responsive">
                 </div>
