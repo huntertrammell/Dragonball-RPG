@@ -66,6 +66,11 @@ body {
     height: 10%;
 }
 
+.overlay {
+    background: black; 
+    opacity: 0.25;
+}
+
 #text {
     z-index: 5;
     position: absolute;
