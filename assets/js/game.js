@@ -47,6 +47,26 @@ var trunks = {
 
 
 
+
+// FUNCTIONS
+
+function createPlayer(player){
+    $('#playerName').text(player.name);
+    $('#playerHP').text(player.health);
+    $('#playerAP').text(player.attack);
+    $('#playerImg').attr('src', `assets/images/${player.name.toLowerCase()}/${player.name.toLowerCase()}avatar.png`);
+    // "assets/images/" + player.name.toLowerCase() +"/"+player.name.toLowerCase()+ "avatar.png"
+    $('#arenaFighter').attr('src', `assets/images/${player.name.toLowerCase()}/left/${player.name.toLowerCase()}.png`);
+    //"assets/images/goku/left/goku.png"
+    
+}
+
+function createEnemy(enemy){
+    $('#enemyName').text(enemy.name);
+    $('#enemyHP').text(enemy.health);
+    $('#enemyAP').text(enemy.counter);
+}
+
 //need to get onclick event for player selection
 
 //main function that houses game mechanics - lots of swapping elements/divs and importing data from arrays
@@ -70,11 +90,7 @@ $(document).ready(function() {
 $(function battle() {
         $('#goku').on('click', function(){
             player = goku;
-            $('#playerImg').attr('src', "assets/images/goku/gokuavatar.png");
-            $('#arenaFighter').attr('src', "assets/images/goku/left/goku.png");
-            $('#playerName').text(goku.name);
-            $('#playerHP').text(goku.health);
-            $('#playerAP').text(goku.attack);
+            createPlayer(player);
             $('.goku').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Goku</h5>' + '<img src="assets/images/goku/gokuavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">325 HP</p>' + '</div>');
             $('#prompt').attr('src', 'assets/images/notify/chooseopponent.png');
             $('#gokutaunt')[0].play();
@@ -84,9 +100,7 @@ $(function battle() {
             player = vegeta;
             $('#playerImg').attr('src', "assets/images/vegeta/vegetaavatar.png");
             $('#arenaFighter').attr('src', "assets/images/vegeta/left/vegeta.png");
-            $('#playerName').text(vegeta.name);
-            $('#playerHP').text(vegeta.health);
-            $('#playerAP').text(vegeta.attack);
+            createPlayer(player);
             $('.vegeta').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Vegeta</h5>' + '<img src="assets/images/vegeta/vegetaavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">350 HP</p>' + '</div>');
             $('#prompt').attr('src', 'assets/images/notify/chooseopponent.png');
             $('#vegetataunt')[0].play();
@@ -95,9 +109,7 @@ $(function battle() {
             player = buu;
             $('#playerImg').attr('src', "assets/images/buu/buuavatar.png");
             $('#arenaFighter').attr('src', "assets/images/buu/left/buu.png");
-            $('#playerName').text(buu.name);
-            $('#playerHP').text(buu.health);
-            $('#playerAP').text(buu.attack);
+            createPlayer(player);
             $('.buu').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">buu</h5>' + '<img src="assets/images/buu/buuavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">150 HP</p>' + '</div>');
             $('#prompt').attr('src', 'assets/images/notify/chooseopponent.png');
             $('#buutaunt')[0].play();
@@ -106,9 +118,7 @@ $(function battle() {
             player = piccolo;
             $('#playerImg').attr('src', "assets/images/piccolo/piccoloavatar.png");
             $('#arenaFighter').attr('src', "assets/images/piccolo/left/piccolo.png");
-            $('#playerName').text(piccolo.name);
-            $('#playerHP').text(piccolo.health);
-            $('#playerAP').text(piccolo.attack);
+            createPlayer(player);
             $('.piccolo').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Piccolo</h5>' + '<img src="assets/images/piccolo/piccoloavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">375 HP</p>' + '</div>');
             $('#prompt').attr('src', 'assets/images/notify/chooseopponent.png');
             $('#piccolotaunt')[0].play();
@@ -117,9 +127,7 @@ $(function battle() {
             player = trunks;
             $('#playerImg').attr('src', "assets/images/trunks/trunksavatar.png");
             $('#arenaFighter').attr('src', "assets/images/trunks/left/trunks.png");
-            $('#playerName').text(trunks.name);
-            $('#playerHP').text(trunks.health);
-            $('#playerAP').text(trunks.attack);
+            createPlayer(player);
             $('.trunks').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Trunks</h5>' + '<img src="assets/images/trunks/trunksavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">350 HP</p>' + '</div>');
             $('#prompt').attr('src', 'assets/images/notify/chooseopponent.png');
             $('#trunkstaunt')[0].play();
@@ -129,9 +137,7 @@ $(function battle() {
             enemy = goku;
             $('#enemyImg').attr('src', "assets/images/goku/gokuavatar.png");
             $('#arenaOpponent').attr('src', "assets/images/goku/right/goku.png");
-            $('#enemyName').text(goku.name);
-            $('#enemyHP').text(goku.health);
-            $('#enemyAP').text(goku.counter);
+            createEnemy(enemy);
             $('.goku').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Goku</h5>' + '<img src="assets/images/goku/gokuavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">325 HP</p>' + '</div>');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
@@ -143,9 +149,7 @@ $(function battle() {
             enemy = vegeta;
             $('#enemyImg').attr('src', "assets/images/vegeta/vegetaavatar.png");
             $('#arenaOpponent').attr('src', "assets/images/vegeta/right/vegeta.png");
-            $('#enemyName').text(vegeta.name);
-            $('#enemyHP').text(vegeta.health);
-            $('#enemyAP').text(vegeta.counter);
+            createEnemy(enemy);
             $('.vegeta').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Vegeta</h5>' + '<img src="assets/images/vegeta/vegetaavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">350 HP</p>' + '</div>');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
@@ -153,12 +157,16 @@ $(function battle() {
             $('#vegetataunt')[0].play();
         })
         $('.buu').on('click', function(){
+            
+            
             enemy = buu
+            console.log("buu health: ", enemy.health)
+            if(enemy.health >0){
+                $('.vegeta').off('click')
+            }
             $('#enemyImg').attr('src', "assets/images/buu/buuavatar.png");
             $('#arenaOpponent').attr('src', "assets/images/buu/right/buu.png");
-            $('#enemyName').text(buu.name);
-            $('#enemyHP').text(buu.health);
-            $('#enemyAP').text(buu.counter);
+            createEnemy(enemy);
             $('.buu').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">buu</h5>' + '<img src="assets/images/buu/buuavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">150 HP</p>' + '</div>');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
@@ -169,9 +177,7 @@ $(function battle() {
             enemy = piccolo;
             $('#enemyImg').attr('src', "assets/images/piccolo/piccoloavatar.png");
             $('#arenaOpponent').attr('src', "assets/images/piccolo/right/piccolo.png");
-            $('#enemyName').text(piccolo.name);
-            $('#enemyHP').text(piccolo.health);
-            $('#enemyAP').text(piccolo.counter);
+            createEnemy(enemy);
             $('.piccolo').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Piccolo</h5>' + '<img src="assets/images/piccolo/piccoloavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">375 HP</p>' + '</div>');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
@@ -182,16 +188,13 @@ $(function battle() {
             enemy = trunks;
             $('#enemyImg').attr('src', "assets/images/trunks/trunksavatar.png");
             $('#arenaOpponent').attr('src', "assets/images/trunks/right/trunks.png");
-            $('#enemyName').text(trunks.name);
-            $('#enemyHP').text(trunks.health);
-            $('#enemyAP').text(trunks.counter);
+            createEnemy(enemy);
             $('.trunks').replaceWith('<div id="emptyDiv" class="col">' + '<h5 class="text-center">Trunks</h5>' + '<img src="assets/images/trunks/trunksavatar.png" class="img-fluid img-thumbnail bg-dark overlay">' + '<p class="text-center font-italic">350 HP</p>' + '</div>');
             $('#prompt').attr('src', '');
             $('#begin').attr('src', 'assets/images/notify/fight.png');
             $('#result').attr('src', '');
             $('#trunkstaunt')[0].play();
         });
-
 $(function battleSim() {
     //on click event for fight begin game mechanics editing data and populating it onto text screen. will also show/hide
 
@@ -224,6 +227,7 @@ $(function battleSim() {
             $('#attackBonus').text('');
             defeat++;
             $(enemy.audio)[0].play();
+            $('.vegeta').on('click');
 
             if (defeat == 4) {
                 $('#begin').attr('src', '');
